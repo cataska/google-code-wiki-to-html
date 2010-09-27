@@ -1,0 +1,14 @@
+<project name="google-wiki-downloader" basedir=".">
+	<taskdef name="google-wiki" 
+		classname="cn.org.rapid_framework.tools.google_wiki_to_html.ext.ant.GoogleWikiTask" 
+		classpath="lib/google-code-wiki-to-html.jar;"
+		>
+	</taskdef>
+	
+	<target name="download-google-wiki">
+		<google-wiki
+			googleprojectname="rapid-framework"
+			downloadfolder="${basedir}/dist/doc"
+		/>
+	</target>
+</project>
