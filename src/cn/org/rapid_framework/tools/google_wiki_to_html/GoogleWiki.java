@@ -143,7 +143,7 @@ public class GoogleWiki {
 	 */
 	private String appendHtmlExtensionToWikiLink(String content) {
 		StringBuffer newContent = new StringBuffer();
-		Pattern pattern = Pattern.compile("href=['\"](.*?"+wikiLinkPrefix+")([^\\s]*)['\"]",Pattern.MULTILINE|Pattern.CASE_INSENSITIVE);
+		Pattern pattern = Pattern.compile("href=['\"]("+wikiLinkPrefix+")([^\\s]*)['\"]",Pattern.MULTILINE|Pattern.CASE_INSENSITIVE);
 		Matcher m = pattern.matcher(content);
 		while(m.find()) {
 			String wikiLinkPrefix = m.group(1);
